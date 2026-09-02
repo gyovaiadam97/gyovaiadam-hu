@@ -88,11 +88,11 @@ akiknek belső eszköz, automatizálás, webapp vagy egy drága SaaS kiváltása
 |---|-------|----|---------|
 | 0 | Terv jóváhagyása + nyitott kérdések megválaszolása | Ádám | ✅ 09-02 |
 | 1 | Domain regisztrálása (Rackhost) | Ádám (Claude másodpilóta) | ⬜ |
-| 2 | Szöveg-vázlat (minden szekció) → Ádám átnézi | Claude → Ádám | ⬜ |
-| 3 | Design + HTML/CSS megépítése, lokális preview | Claude | ⬜ |
+| 2 | Szöveg-vázlat (minden szekció) → Ádám átnézi | Claude → Ádám | ✅ 09-02 (beépítve az oldalba, Ádám átnézi élőben) |
+| 3 | Design + HTML/CSS megépítése, lokális preview | Claude | ✅ 09-02 |
 | 4 | Fotó + hiányzó CV-adatok beépítése | Ádám ad, Claude épít | ⬜ |
-| 5 | Repo + GitHub Pages + DNS + HTTPS | Claude (DNS: Ádám lép be, Claude vezérel) | ⬜ |
-| 6 | Ellenőrzés: mobil/desktop, Lighthouse, linkek, cert | Claude | ⬜ |
+| 5 | Repo + GitHub Pages + DNS + HTTPS | Claude (DNS: Ádám lép be, Claude vezérel) | 🟡 repo+Pages kész (gyovaiadam97/gyovaiadam-hu, CNAME beállítva); DNS + HTTPS a domain-regisztráció után |
+| 6 | Ellenőrzés: mobil/desktop, Lighthouse, linkek, cert | Claude | 🟡 mobil/desktop headless-screenshot OK (390/1440 px, nincs vízszintes túlcsordulás); cert+Lighthouse élesítés után |
 | 7 | 2. ütem: űrlap-backend, analitika, angol verzió | később | ⬜ |
 
 Becslés: 1–3. lépés egy ülésben; élesítés a domain-regisztráció + DNS-átfutás után (órák–1 nap).
@@ -130,3 +130,15 @@ Tájékoztató „-tól" sávok az oldalon, a pontos ár a spec után fix:
 
 - 2026-09-02: projekt indul, terv megírva, domain-állapot ellenőrizve (nincs regisztrálva).
 - 2026-09-02: Ádám jóváhagyta, válaszok beépítve, DESIGN.md átvéve; építés indul.
+- 2026-09-02: oldal kész (`docs/index.html` + `docs/style.css`), repo publikus, Pages bekapcsolva main:/docs, cname=gyovaiadam.hu.
+  Headless-Chrome tanulság: az ablak min. 500 px széles, mobil-nézethez iframe-be kell tenni (390 px).
+
+## 8. Köv. lépések
+
+1. **Ádám:** gyovaiadam.hu regisztrálása (Rackhost). Utána szólni.
+2. **DNS** (Rackhost admin, Ádám belép, Claude vezérel): apex A → 185.199.108.153, .109.153, .110.153, .111.153;
+   `www` CNAME → gyovaiadam97.github.io. TTL 300.
+3. GitHub Pages: DNS-check zöld → cert kérés → `https_enforced=true` (gh api PUT .../pages -F https_enforced=true).
+4. Ádám átnézi élőben a szövegeket és az ÁRAKAT (6. pont) → javítások.
+5. Fotó/videó a hero-ba és a Rólam-szekcióba, amikor megvan.
+6. 2. ütem: űrlap-backend (VPS + Brevo), analitika, angol.
