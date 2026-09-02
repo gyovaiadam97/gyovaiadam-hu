@@ -130,12 +130,13 @@ Tájékoztató „-tól" sávok az oldalon, a pontos ár a spec után fix:
 
 - 2026-09-02: projekt indul, terv megírva, domain-állapot ellenőrizve (nincs regisztrálva).
 - 2026-09-02: Ádám jóváhagyta, válaszok beépítve, DESIGN.md átvéve; építés indul.
-- 2026-09-02: oldal kész (`docs/index.html` + `docs/style.css`), repo publikus, Pages bekapcsolva main:/docs, cname=gyovaiadam.hu.
+- 2026-09-02: oldal kész (`docs/index.html` + `docs/style.css`), repo publikus, Pages bekapcsolva main:/docs.
+- 2026-09-02: domain-regisztráció elhalasztva (Ádám később veszi meg), ezért a CNAME ideiglenesen LEVÉVE; előnézet: https://gyovaiadam97.github.io/gyovaiadam-hu/ (200, ellenőrizve). Domain után: `docs/CNAME` vissza + Pages cname beállítás.
   Headless-Chrome tanulság: az ablak min. 500 px széles, mobil-nézethez iframe-be kell tenni (390 px).
 
 ## 8. Köv. lépések
 
-1. **Ádám:** gyovaiadam.hu regisztrálása (Rackhost). Utána szólni.
+1. **Ádám:** gyovaiadam.hu regisztrálása (Rackhost), később. Utána: `printf 'gyovaiadam.hu\n' > docs/CNAME` + push + `gh api -X PUT repos/gyovaiadam97/gyovaiadam-hu/pages -f cname=gyovaiadam.hu`.
 2. **DNS** (Rackhost admin, Ádám belép, Claude vezérel): apex A → 185.199.108.153, .109.153, .110.153, .111.153;
    `www` CNAME → gyovaiadam97.github.io. TTL 300.
 3. GitHub Pages: DNS-check zöld → cert kérés → `https_enforced=true` (gh api PUT .../pages -F https_enforced=true).
