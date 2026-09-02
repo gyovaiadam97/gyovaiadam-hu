@@ -112,7 +112,7 @@ Becslés: 1–3. lépés egy ülésben; élesítés a domain-regisztráció + DN
 6. **Fotó/videó:** placeholderrel indulunk; később fotók + videó Ádámról (a hero-ba tervezve).
 7. **Hosting:** GitHub Pages.
 8. **Nyelv:** csak magyar.
-9. **Design:** a `DESIGN.md` (Downloads-ból bemásolva a projektbe) — „Henry" stílus: fekete vászon,
+9. **Design:** a `DESIGN.md` (Downloads-ból bemásolva a projektbe) — „Henry" stílus. **A forrás az élő www.ai.work oldal** (a refero.design csak ebből vonta ki a tokeneket); az elrendezést onnan másoltuk szekciónként (2026-09-02, 2. kör). Stílus: fekete vászon,
    300-as súlyú világos címek, pill gombok, hajszálvékony warm-gray keretek, chromatikus szín csak a
    stat-sávokban. NB International Pro helyett Inter (300/400/500) + JetBrains Mono (a doksi saját
    helyettesítési ajánlása szerint, Google Fonts).
@@ -143,3 +143,5 @@ Tájékoztató „-tól" sávok az oldalon, a pontos ár a spec után fix:
 4. Ádám átnézi élőben a szövegeket és az ÁRAKAT (6. pont) → javítások.
 5. Fotó/videó a hero-ba és a Rólam-szekcióba, amikor megvan.
 6. 2. ütem: űrlap-backend (VPS + Brevo), analitika, angol.
+- 2026-09-02 (2. kör): Ádám visszajelzése: nem hasonlított eléggé a refero-sablonra. Kiderült, hogy a sablon az élő **www.ai.work** oldal; azt szekciónként végigfotóztam és a számított stílusértékeket kimértem (body #141414, nem fekete; chipek bone 4%, 4px; címke-pill bone 10% + mono 10px; kártyák 8px, 24px padding; hero 8px beljebb, 8px radius; záró CTA 96px). Az oldal teljesen újraépítve az eredeti szerkezetére: keretezett hero fotóval + lebegő fehér kártyák, vízszintes munkakártya-sor számlálóval, 3 stat-kártya, keretezett idővonal-kártya (folyamat), eredmény-idézet, váltakozó feature-sorok mockokkal, üzemeltetés-inbox, lebegő eszköz-chipek, bento-árak, Rólam, GYIK, 96px CTA, lábléc óriás wordmarkkal, lebegő „Írj nekem" gomb.
+  Hero-fotó: Artlisttel generált aranyórás hegyi táj (130 kredit), `docs/img/hero.webp` + `hero-m.webp` + `og.jpg`. Tanulság: a DESIGN.md tokenlista önmagában nem elég, mindig az eredeti oldal URL-je/képernyőképe kell.
