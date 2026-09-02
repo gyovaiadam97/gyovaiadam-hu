@@ -12,7 +12,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23fbf5f0'/%3E%3Crect x='7' y='16' width='5' height='9' rx='2' fill='%23fa5d00'/%3E%3Crect x='13.5' y='10' width='5' height='15' rx='2' fill='%23fa5d00'/%3E%3Crect x='20' y='6' width='5' height='19' rx='2' fill='%23fa5d00'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Besley:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Besley:wght@400;500&family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -46,15 +46,21 @@
       </div>
       <div class="checks"><span>Ingyenes első beszélgetés</span><span>Fix ár a spec után</span><span>A kód a tiéd</span></div>
     </div>
-    <div class="vis" aria-hidden="true">
-      <div class="vis-glow"></div>
-      <picture class="vis-img">
-        <source media="(max-width: 700px)" srcset="img/hero-3d-m.webp">
-        <img src="img/hero-3d.webp" alt="" fetchpriority="high">
-      </picture>
-      <div class="chip c1"><i></i>Specifikáció elfogadva</div>
-      <div class="chip c2"><b>12/12</b> teszt zöld</div>
-      <div class="chip c3">Heti demó · péntek</div>
+    <div class="px" aria-hidden="true">
+      <div class="px-win">
+        <div class="px-bar"><span class="px-dots"><i></i><i></i><i></i></span><span class="px-title">GYOVAIADAM.EXE</span><span class="px-x">×</span></div>
+        <div class="px-screen">
+          <img src="img/hero-pixel.png" alt="">
+          <div class="px-scan"></div>
+        </div>
+        <div class="px-status">
+          <span class="px-load">BUILD <span class="px-prog"><i></i></span> <b id="pxPct">0%</b></span>
+          <span class="px-blink">▮</span>
+        </div>
+      </div>
+      <div class="px-chip a">+1 APP KÉSZ</div>
+      <div class="px-chip b">12/12 TESZT OK</div>
+      <div class="px-chip c">LVL 9 · SZOFTVER</div>
     </div>
     </div>
   </div>
@@ -466,6 +472,8 @@
 
 <script>
 (function(){
+  // Pixel build-számláló
+  var pct=document.getElementById('pxPct'), pv=0; setInterval(function(){ pv=(pv+7)%108; pct.textContent=Math.min(pv,100)+'%'; },420);
   // Forgó szó a hero-ban
   var ws=[].slice.call(document.querySelectorAll('#rot .w')), wi=0;
   setInterval(function(){ ws[wi].classList.remove('on'); wi=(wi+1)%ws.length; ws[wi].classList.add('on'); },2600);
