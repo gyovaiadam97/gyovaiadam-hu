@@ -36,16 +36,17 @@ h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.025em; 
 .nav-links a:hover { border-color: #aeaeae; }
 
 /* Hero: teljes magasság, középre igazított oszlop, gerincvonal alul */
-.hero { min-height: min(calc(100vh - 64px), 880px); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative; padding: 80px 24px 300px; }
+.hero { min-height: min(calc(100vh - 64px), 900px); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative; padding: 60px 24px 320px; }
 .hero h1 { font-size: 72px; line-height: 1.1; max-width: 760px; }
 .hero .sub { font-size: 18px; color: var(--fog); margin-top: 28px; }
 .hero .btn { margin-top: 40px; }
-.path { position: absolute; left: 0; right: 0; bottom: 48px; width: 100%; height: 220px; display: block; }
-.path .line { fill: none; stroke: var(--fog); stroke-width: 1.4; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 1600; stroke-dashoffset: 1600; animation: draw 2.6s cubic-bezier(.4,0,.2,1) .2s forwards; }
-.path .nodes, .path .labels { opacity: 0; animation: fadeIn .8s ease 1.6s forwards; }
-.path .win { stroke-dasharray: 700; stroke-dashoffset: 700; animation: draw 1.6s ease 2.4s forwards; }
-.path .win .ui { stroke-dasharray: 300; stroke-dashoffset: 300; animation: draw 1.2s ease 3.4s forwards; }
-.path .dot { opacity: 0; animation: fadeIn .4s ease 3s forwards; }
+.path { position: absolute; left: 0; right: 0; bottom: 36px; width: 100%; height: auto; aspect-ratio: 1512 / 260; display: block; }
+.path .line { stroke-dasharray: 2200; stroke-dashoffset: 2200; animation: draw 3s cubic-bezier(.4,0,.2,1) .2s forwards; }
+.path .line.in { animation-delay: .6s; } .path .line.br { stroke-dasharray: 400; stroke-dashoffset: 400; animation: draw 1.4s ease 1.6s forwards; }
+.path .nodes, .path .labels, .path .commits, .path .pulses { opacity: 0; animation: fadeIn .8s ease 1.8s forwards; }
+.path .win { opacity: 0; animation: fadeIn .8s ease 2.6s forwards; }
+.path .win .ui { stroke-dasharray: 300; stroke-dashoffset: 300; animation: draw 1.2s ease 3s forwards; }
+.path .dots { opacity: 0; animation: fadeIn .4s ease 3.2s forwards; }
 @keyframes fadeIn { to { opacity: 1; } }
 @keyframes draw { to { stroke-dashoffset: 0; } }
 
@@ -161,12 +162,12 @@ footer { background: var(--c0); border-top: 1px solid var(--c2); padding: 64px 0
 /* Görgetésre megjelenés */
 [data-reveal] { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; transition-delay: var(--d, 0s); }
 [data-reveal].in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1; transform: none; transition: none; } .path .line, .path .win, .path .win .ui { animation: none; stroke-dashoffset: 0; } .path .nodes, .path .labels, .path .dot { animation: none; opacity: 1; } .term .main .ln { animation: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1; transform: none; transition: none; } .path .line, .path .win .ui { animation: none; stroke-dashoffset: 0; } .path .nodes, .path .labels, .path .commits, .path .pulses, .path .win, .path .dots { animation: none; opacity: 1; } .term .main .ln { animation: none; opacity: 1; } }
 
 /* Reszponzív */
 @media (max-width: 1000px) { .tiles { grid-template-columns: repeat(3, 1fr); } .prices { grid-template-columns: 1fr 1fr; } .cards3 { grid-template-columns: 1fr; } .split, .split.rev { grid-template-columns: 1fr; } .split.rev .copy { order: -1; } .table .thead { display: none; } .table .tr { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 640px) {
-  .nav-links { display: none; } .hero { min-height: 0; padding: 72px 20px 200px; } .hero h1 { font-size: 40px; } .path { height: 120px; bottom: 16px; }
+  .nav-links { display: none; } .hero { min-height: 0; padding: 72px 20px 120px; } .hero h1 { font-size: 40px; } .path { bottom: 12px; }
   .sec { padding-top: 56px; padding-bottom: 56px; } .sec h2 { font-size: 32px; }
   .tiles { grid-template-columns: repeat(2, 1fr); } .prices { grid-template-columns: 1fr; }
   .term { grid-template-columns: 1fr; left: 4%; right: 4%; } .term .side { display: none; } .visual { aspect-ratio: 4 / 5; }
