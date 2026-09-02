@@ -48,9 +48,9 @@ h3 { font-weight: 500; letter-spacing: 0; }
 
 /* Hero */
 .hero { padding: 96px 0 72px; }
-.hero .cols { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: center; }
+.hero .cols { display: grid; grid-template-columns: 0.85fr 1.35fr; gap: 48px; align-items: center; }
 .hero-txt { text-align: center; }
-.hero h1 { font-size: 72px; line-height: 1.15; }
+.hero h1 { font-size: 66px; line-height: 1.15; }
 .hero h1 .rot { position: relative; display: inline-block; color: var(--ink); }
 .hero h1 .rot .w { display: inline-block; opacity: 0; position: absolute; left: 0; right: 0; transition: opacity .4s ease, transform .4s ease; transform: translateY(10px); white-space: nowrap; }
 .hero h1 .rot .w.on { opacity: 1; position: relative; transform: none; }
@@ -58,7 +58,7 @@ h3 { font-weight: 500; letter-spacing: 0; }
 .hero .lead { margin: 28px auto 0; max-width: 520px; color: var(--gray); font-size: 18px; }
 .mailbox { margin: 32px auto 0; max-width: 520px; background: var(--peach); border: 1px solid #ead9c6; border-radius: 999px; padding: 6px 6px 6px 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .mailbox .addr { color: var(--gray); font-size: 16px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.checks { display: flex; gap: 24px; justify-content: center; margin-top: 20px; font-size: 15px; color: var(--gray); flex-wrap: wrap; }
+.checks { display: flex; gap: 18px; justify-content: center; margin-top: 20px; font-size: 14px; color: var(--gray); flex-wrap: wrap; }
 .checks span::before { content: "✓"; color: var(--orange); font-weight: 700; margin-right: 8px; }
 
 /* Termék-kártya a hero-ban (korall csík + fehér app-mock) */
@@ -341,13 +341,13 @@ footer { background: #fff; padding: 80px 0 40px; }
 @media (max-width: 600px) { .vis .c2 { display: none; } }
 
 /* ===== Hero: pixeles retro ablak ===== */
-.px { position: relative; padding: 12px 0 0; }
+.px { position: relative; padding: 12px 0 0; margin-right: -24px; }
 .px-win { background: var(--peach); border: 4px solid var(--ink); border-radius: 6px; box-shadow: 10px 10px 0 var(--coral), var(--shadow); overflow: hidden; image-rendering: pixelated; }
 .px-bar { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--ink); color: var(--cream); font-family: 'Press Start 2P', ui-monospace, monospace; font-size: 10px; letter-spacing: .02em; }
 .px-dots { display: inline-flex; gap: 6px; } .px-dots i { width: 10px; height: 10px; background: var(--coral); } .px-dots i:nth-child(2) { background: var(--orange); } .px-dots i:nth-child(3) { background: #fee3b5; }
 .px-title { flex: 1; text-align: center; } .px-x { color: var(--coral); }
-.px-screen { position: relative; background: var(--cream); }
-.px-screen img { display: block; width: 100%; height: auto; image-rendering: pixelated; image-rendering: crisp-edges; }
+.px-screen { position: relative; background: #fef2e4; }
+.px-screen img { display: block; width: 100%; max-width: 92%; margin: 0 auto; height: auto; image-rendering: pixelated; image-rendering: crisp-edges; }
 .px-scan { position: absolute; inset: 0; background: repeating-linear-gradient(180deg, rgba(29,30,28,0) 0 3px, rgba(29,30,28,.05) 3px 4px); pointer-events: none; }
 .px-status { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: #fff; border-top: 4px solid var(--ink); font-family: 'Press Start 2P', ui-monospace, monospace; font-size: 10px; color: var(--ink); }
 .px-load { display: inline-flex; align-items: center; gap: 10px; }
@@ -360,6 +360,6 @@ footer { background: #fff; padding: 80px 0 40px; }
 .px-chip.b { right: -16px; top: 46%; background: #fff; animation-delay: -1.2s; }
 .px-chip.c { right: 8%; bottom: -16px; background: var(--orange); color: #fff; animation-delay: -1.8s; }
 @keyframes pxBob { 50% { transform: translateY(-4px); } }
-@media (max-width: 900px) { .px-chip.a { left: 8px; } .px-chip.b { right: 8px; } }
+@media (max-width: 900px) { .px { margin-right: 0; } .px-chip.a { left: 8px; } .px-chip.b { right: 8px; } }
 @media (max-width: 600px) { .px-chip.b { display: none; } .px-win { box-shadow: 6px 6px 0 var(--coral); } .px-prog { width: 80px; } }
 @media (prefers-reduced-motion: reduce) { .px-chip, .px-blink, .px-prog i { animation: none; } .px-prog i { width: 100%; } }
