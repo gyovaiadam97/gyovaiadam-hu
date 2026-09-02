@@ -40,8 +40,13 @@ h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.025em; 
 .hero h1 { font-size: 72px; line-height: 1.1; max-width: 760px; }
 .hero .sub { font-size: 18px; color: var(--fog); margin-top: 28px; }
 .hero .btn { margin-top: 40px; }
-.ridge { position: absolute; left: 0; right: 0; bottom: 40px; width: 100%; height: 260px; display: block; }
-.ridge path { fill: none; stroke: var(--fog); stroke-width: 1.4; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 4000; stroke-dashoffset: 4000; animation: draw 3.2s cubic-bezier(.4,0,.2,1) .3s forwards; }
+.path { position: absolute; left: 0; right: 0; bottom: 48px; width: 100%; height: 220px; display: block; }
+.path .line { fill: none; stroke: var(--fog); stroke-width: 1.4; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 1600; stroke-dashoffset: 1600; animation: draw 2.6s cubic-bezier(.4,0,.2,1) .2s forwards; }
+.path .nodes, .path .labels { opacity: 0; animation: fadeIn .8s ease 1.6s forwards; }
+.path .win { stroke-dasharray: 700; stroke-dashoffset: 700; animation: draw 1.6s ease 2.4s forwards; }
+.path .win .ui { stroke-dasharray: 300; stroke-dashoffset: 300; animation: draw 1.2s ease 3.4s forwards; }
+.path .dot { opacity: 0; animation: fadeIn .4s ease 3s forwards; }
+@keyframes fadeIn { to { opacity: 1; } }
 @keyframes draw { to { stroke-dashoffset: 0; } }
 
 /* Szekciók */
@@ -156,12 +161,12 @@ footer { background: var(--c0); border-top: 1px solid var(--c2); padding: 64px 0
 /* Görgetésre megjelenés */
 [data-reveal] { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; transition-delay: var(--d, 0s); }
 [data-reveal].in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1; transform: none; transition: none; } .ridge path { animation: none; stroke-dashoffset: 0; } .term .main .ln { animation: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1; transform: none; transition: none; } .path .line, .path .win, .path .win .ui { animation: none; stroke-dashoffset: 0; } .path .nodes, .path .labels, .path .dot { animation: none; opacity: 1; } .term .main .ln { animation: none; opacity: 1; } }
 
 /* Reszponzív */
 @media (max-width: 1000px) { .tiles { grid-template-columns: repeat(3, 1fr); } .prices { grid-template-columns: 1fr 1fr; } .cards3 { grid-template-columns: 1fr; } .split, .split.rev { grid-template-columns: 1fr; } .split.rev .copy { order: -1; } .table .thead { display: none; } .table .tr { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 640px) {
-  .nav-links { display: none; } .hero { min-height: 0; padding: 72px 20px 200px; } .hero h1 { font-size: 40px; } .ridge { height: 160px; bottom: 20px; }
+  .nav-links { display: none; } .hero { min-height: 0; padding: 72px 20px 200px; } .hero h1 { font-size: 40px; } .path { height: 120px; bottom: 16px; }
   .sec { padding-top: 56px; padding-bottom: 56px; } .sec h2 { font-size: 32px; }
   .tiles { grid-template-columns: repeat(2, 1fr); } .prices { grid-template-columns: 1fr; }
   .term { grid-template-columns: 1fr; left: 4%; right: 4%; } .term .side { display: none; } .visual { aspect-ratio: 4 / 5; }
