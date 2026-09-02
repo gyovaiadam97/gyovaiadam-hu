@@ -167,7 +167,7 @@ footer { background: var(--c0); border-top: 1px solid var(--c2); padding: 64px 0
 /* Reszponzív */
 @media (max-width: 1000px) { .tiles { grid-template-columns: repeat(3, 1fr); } .prices { grid-template-columns: 1fr 1fr; } .cards3 { grid-template-columns: 1fr; } .split, .split.rev { grid-template-columns: 1fr; } .split.rev .copy { order: -1; } .table .thead { display: none; } .table .tr { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 640px) {
-  .nav-links { display: none; } .hero { min-height: 0; padding: 72px 20px 120px; } .hero h1 { font-size: 40px; } .path { bottom: 12px; }
+  .nav-links { display: none; } .hero { min-height: 0; padding: 72px 20px 150px; overflow: hidden; } .path { width: 240%; left: -70%; right: auto; bottom: 8px; } .hero h1 { font-size: 40px; } .path { bottom: 12px; }
   .sec { padding-top: 56px; padding-bottom: 56px; } .sec h2 { font-size: 32px; }
   .tiles { grid-template-columns: repeat(2, 1fr); } .prices { grid-template-columns: 1fr; }
   .term { grid-template-columns: 1fr; left: 4%; right: 4%; } .term .side { display: none; } .visual { aspect-ratio: 4 / 5; }
