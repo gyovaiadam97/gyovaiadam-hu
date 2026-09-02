@@ -46,40 +46,15 @@
       </div>
       <div class="checks"><span>Ingyenes első beszélgetés</span><span>Fix ár a spec után</span><span>A kód a tiéd</span></div>
     </div>
-    <div class="shot dev" aria-hidden="true">
-      <div class="ide">
-        <div class="ide-top"><span class="dots"><i></i><i></i><i></i></span><span class="tabbar"><span>spec.md</span><span class="on">app.py</span><span>App.svelte</span></span><span class="run">▶ Futtatás</span></div>
-        <div class="ide-body">
-          <div class="req"><span class="av">Te</span><div><b>Kérés</b>Kellene egy eszköz, ami a bejövő számlákat dátum és kiállító szerint átnevezi, és egy mappába teszi.</div></div>
-          <div class="code">
-            <div class="ln" style="--i:0"><span class="n">1</span><span class="k">from</span> fastapi <span class="k">import</span> FastAPI</div>
-            <div class="ln" style="--i:1"><span class="n">2</span><span class="k">from</span> szamla <span class="k">import</span> kinyer, atnevez</div>
-            <div class="ln" style="--i:2"><span class="n">3</span></div>
-            <div class="ln" style="--i:3"><span class="n">4</span>app = FastAPI()</div>
-            <div class="ln" style="--i:4"><span class="n">5</span></div>
-            <div class="ln" style="--i:5"><span class="n">6</span><span class="d">@app.post</span>(<span class="s">"/feldolgoz"</span>)</div>
-            <div class="ln" style="--i:6"><span class="n">7</span><span class="k">def</span> <span class="f">feldolgoz</span>(zip_fajl):</div>
-            <div class="ln" style="--i:7"><span class="n">8</span>    <span class="k">for</span> pdf <span class="k">in</span> kicsomagol(zip_fajl):</div>
-            <div class="ln" style="--i:8"><span class="n">9</span>        datum, kiallito = kinyer(pdf)</div>
-            <div class="ln" style="--i:9"><span class="n">10</span>        atnevez(pdf, <span class="s">f"{datum}_{kiallito}.pdf"</span>)</div>
-            <div class="ln" style="--i:10"><span class="n">11</span>    <span class="k">return</span> {<span class="s">"kesz"</span>: <span class="c">True</span>}<span class="caret"></span></div>
-          </div>
-          <div class="prev">
-            <div class="prev-hd">Előnézet <span class="live">● élő</span></div>
-            <div class="ui">
-              <div class="ui-bar" style="--i:2"><i></i>Számla-átnevező</div>
-              <div class="drop" style="--i:5">ZIP ide dobva · 17 PDF</div>
-              <div class="li" style="--i:7"><em>✓</em>2026-08-14_Telekom.pdf</div>
-              <div class="li" style="--i:8"><em>✓</em>2026-08-19_Rackhost.pdf</div>
-              <div class="li" style="--i:9"><em>✓</em>2026-08-27_Brevo.pdf</div>
-              <div class="ui-btn" style="--i:10">Mappa megnyitása</div>
-            </div>
-            <div class="tests" style="--i:11">Tesztek: 12/12 ✓</div>
-          </div>
-        </div>
-        <div class="ide-foot"><span>Specifikáció elfogadva</span><span>Heti demó: péntek</span><span class="ok">Kész: 73 mp</span></div>
-      </div>
-      <svg class="cursor" viewBox="0 0 24 28" aria-hidden="true"><path d="M9 2c1.2 0 2 .9 2 2v8h1V9c0-1.1.9-2 2-2s2 .9 2 2v3h1v-2c0-1.1.9-2 2-2s2 .9 2 2v2h1c0-1 .9-1.6 1.7-1.6.9 0 1.6.8 1.6 1.8V19c0 4.5-3.6 8-8 8h-2c-2.2 0-4.2-.9-5.6-2.3L2.4 17c-.8-.8-.8-2 0-2.7s2-.8 2.8 0L7 16V4c0-1.1.9-2 2-2z" fill="#fff" stroke="#1d1e1c" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    <div class="vis" aria-hidden="true">
+      <div class="vis-glow"></div>
+      <picture class="vis-img">
+        <source media="(max-width: 700px)" srcset="img/hero-3d-m.webp">
+        <img src="img/hero-3d.webp" alt="" fetchpriority="high">
+      </picture>
+      <div class="chip c1"><i></i>Specifikáció elfogadva</div>
+      <div class="chip c2"><b>12/12</b> teszt zöld</div>
+      <div class="chip c3">Heti demó · péntek</div>
     </div>
     </div>
   </div>

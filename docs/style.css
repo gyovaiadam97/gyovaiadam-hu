@@ -322,3 +322,20 @@ footer { background: #fff; padding: 80px 0 40px; }
 .ide-foot .ok { margin-left: auto; color: var(--green); font-weight: 600; }
 @media (max-width: 600px) { .ide-body { grid-template-columns: 1fr; } .code { border-right: 0; border-bottom: 1px solid var(--line); } .shot.dev .cursor { display: none; } }
 @media (prefers-reduced-motion: reduce) { .code .ln, .ui > *, .tests { opacity: 1 !important; animation: none !important; } }
+
+/* ===== Hero: 3D látvány (Artlist-render) lebegő jelvényekkel ===== */
+.vis { position: relative; }
+.vis-glow { position: absolute; inset: 8% 4%; border-radius: 50%; background: radial-gradient(ellipse at 55% 55%, rgba(250,93,0,.28), rgba(251,163,127,.14) 45%, transparent 72%); filter: blur(28px); animation: glow 6s ease-in-out infinite; }
+@keyframes glow { 50% { opacity: .6; transform: scale(1.06); } }
+.vis-img { position: relative; display: block; border-radius: var(--r); overflow: hidden; box-shadow: 0 30px 60px rgba(123,85,31,.22), 0 4px 10px rgba(123,85,31,.12); animation: floatY 7s ease-in-out infinite; }
+.vis-img img { display: block; width: 100%; height: auto; }
+@keyframes floatY { 50% { transform: translateY(-8px); } }
+.vis .chip { position: absolute; background: rgba(255,255,255,.78); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.9); border-radius: 999px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--ink); box-shadow: var(--shadow); display: inline-flex; align-items: center; gap: 8px; animation: floatY 6s ease-in-out infinite; }
+.vis .chip i { width: 9px; height: 9px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(24,132,51,.15); }
+.vis .chip b { color: var(--orange); font-weight: 700; }
+.vis .c1 { left: -14px; top: 12%; animation-delay: -1.5s; }
+.vis .c2 { right: -10px; top: 26%; animation-delay: -3s; }
+.vis .c3 { left: 10%; bottom: 8%; animation-delay: -4.5s; }
+@media (max-width: 900px) { .vis .c1 { left: 8px; } .vis .c2 { right: 8px; } }
+@media (prefers-reduced-motion: reduce) { .vis-img, .vis .chip, .vis-glow { animation: none; } }
+@media (max-width: 600px) { .vis .c2 { display: none; } }
