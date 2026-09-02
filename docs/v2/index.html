@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gyovai Ádám · Szoftver, hetek alatt (v2)</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Belső eszköz, webapp, automatizálás vagy egy drága előfizetés kiváltása. Írásos specifikáció, fix ár, heti demó.">
+  <meta name="theme-color" content="#f6f3f1">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23f6f3f1'/%3E%3Cg fill='%23242424'%3E%3Ccircle cx='16' cy='6' r='2'/%3E%3Ccircle cx='23' cy='9' r='2'/%3E%3Ccircle cx='26' cy='16' r='2'/%3E%3Ccircle cx='23' cy='23' r='2'/%3E%3Ccircle cx='16' cy='26' r='2'/%3E%3Ccircle cx='9' cy='23' r='2'/%3E%3Ccircle cx='6' cy='16' r='2'/%3E%3Ccircle cx='9' cy='9' r='2'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ann" id="ann"><span>Négy fizetős előfizetést váltottam ki saját szoftverrel. Nézd meg, miket építettem.</span><a class="btn btn-white" href="#munkaim">Munkáim</a><span class="x" id="annX" aria-label="Bezárás">×</span></div>
+
+<header class="wrap nav">
+  <div class="nav-l">
+    <a class="logo" href="#"><svg viewBox="0 0 44 44" aria-hidden="true"><g fill="#242424"><circle cx="22" cy="6" r="2.6"/><circle cx="33.3" cy="10.7" r="2.6"/><circle cx="38" cy="22" r="2.6"/><circle cx="33.3" cy="33.3" r="2.6"/><circle cx="22" cy="38" r="2.6"/><circle cx="10.7" cy="33.3" r="2.6"/><circle cx="6" cy="22" r="2.6"/><circle cx="10.7" cy="10.7" r="2.6"/></g></svg>gyovaiadam</a>
+    <nav class="nav-links" aria-label="Fő navigáció"><a href="#folyamat">Folyamat</a><a href="#munkaim">Munkáim</a><a href="#miert">Miért én</a><a href="#arak">Árak</a><a href="#rolam">Rólam</a></nav>
+  </div>
+  <div class="nav-r">
+    <a class="btn btn-black" href="#folyamat">Hogyan dolgozom <span class="ar">›</span></a>
+    <a class="btn btn-blue" href="mailto:gyovaiadam97@gmail.com?subject=Szoftver%20%C3%B6tlet">Írj nekem <span class="ar">›</span></a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Az ötletedből kész szoftver, hetek alatt.</h1>
+    <p class="sub">Belső eszköz, webapp, automatizálás vagy egy drága előfizetés kiváltása. Írásos specifikáció, fix ár, heti demó. Egy ember építi, aki érti az üzleti oldalt is.</p>
+    <div class="hero-cta"><a class="btn btn-black" href="mailto:gyovaiadam97@gmail.com?subject=Szoftver%20%C3%B6tlet">Írj nekem</a><a class="btn btn-ghost" href="#munkaim">Munkáim</a></div>
+  </div>
+
+  <div class="pipe" aria-hidden="true">
+    <svg class="lines" viewBox="0 0 1272 520" preserveAspectRatio="none" fill="none">
+      <g stroke="#cecac8" stroke-width="1.2">
+        <path d="M200 60 C 330 60, 380 260, 536 260"/>
+        <path d="M200 160 C 330 160, 380 260, 536 260"/>
+        <path d="M200 260 L 536 260"/>
+        <path d="M200 360 C 330 360, 380 260, 536 260"/>
+        <path d="M200 460 C 330 460, 380 260, 536 260"/>
+        <path d="M736 260 C 900 260, 940 60, 1072 60"/>
+        <path d="M736 260 C 900 260, 940 160, 1072 160"/>
+        <path d="M736 260 L 1072 260"/>
+        <path d="M736 260 C 900 260, 940 360, 1072 360"/>
+        <path d="M736 260 C 900 260, 940 460, 1072 460"/>
+      </g>
+      <g stroke="#ff9473" stroke-width="1.6" class="flowg">
+        <path class="flow" d="M200 60 C 330 60, 380 260, 536 260"/>
+        <path class="flow" d="M200 360 C 330 360, 380 260, 536 260"/>
+        <path class="flow" d="M200 260 L 536 260"/>
+      </g>
+      <g stroke="#27a367" stroke-width="1.6">
+        <path class="flow" d="M736 260 C 900 260, 940 60, 1072 60"/>
+        <path class="flow" d="M736 260 L 1072 260"/>
+        <path class="flow" d="M736 260 C 900 260, 940 460, 1072 460"/>
+      </g>
+    </svg>
+    <div class="node" style="left:15.7%;top:11.5%"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.8 3.7 4 .6-2.9 2.8.7 4L8 10.7l-3.6 1.9.7-4L2.2 5.8l4-.6z"/></svg>Ötlet, ami sose készül el</div>
+    <div class="node" style="left:15.7%;top:30.8%"><svg viewBox="0 0 16 16"><rect x="2" y="3" width="12" height="10" rx="1"/><path d="M2 7h12M6 3v10"/></svg>Excel-tábla, ami szétesik</div>
+    <div class="node" style="left:15.7%;top:50%"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2"/></svg>Ismétlődő kézi munka</div>
+    <div class="node" style="left:15.7%;top:69.2%"><svg viewBox="0 0 16 16"><rect x="2" y="4" width="12" height="8" rx="1.5"/><path d="M2 8h12"/></svg>Drága előfizetés</div>
+    <div class="node" style="left:15.7%;top:88.5%"><svg viewBox="0 0 16 16"><path d="M3 13l3-8 2 5 2-3 3 6z"/></svg>Fejben tartott folyamat</div>
+
+    <div class="tag" style="left:29%;top:19%"><i style="background:#ff9473"></i>Beszélgetés</div>
+    <div class="tag" style="left:33%;top:60%"><i style="background:#ecda98"></i>Fix ár</div>
+    <div class="tag" style="left:70%;top:38%"><i style="background:#27a367"></i>Heti demó</div>
+    <div class="tag" style="left:67%;top:80%"><i style="background:#a0b5eb"></i>Tesztek</div>
+
+    <div class="hub">
+      <div class="glow"></div><div class="dia"></div><div class="dia2"></div>
+      <span class="lab t">Specifikáció</span><span class="lab b">Átadás</span><span class="lab l">Építés</span><span class="lab r">Teszt</span>
+      <div class="core"><svg viewBox="0 0 44 44"><g fill="#242424"><circle cx="22" cy="6" r="2.6"/><circle cx="33.3" cy="10.7" r="2.6"/><circle cx="38" cy="22" r="2.6"/><circle cx="33.3" cy="33.3" r="2.6"/><circle cx="22" cy="38" r="2.6"/><circle cx="10.7" cy="33.3" r="2.6"/><circle cx="6" cy="22" r="2.6"/><circle cx="10.7" cy="10.7" r="2.6"/></g></svg></div>
+    </div>
+
+    <div class="node out" style="left:84.3%;top:11.5%">Webapp</div>
+    <div class="node out" style="left:84.3%;top:30.8%">Belső eszköz</div>
+    <div class="node out" style="left:84.3%;top:50%">Automatizálás</div>
+    <div class="node out" style="left:84.3%;top:69.2%">macOS app, plugin</div>
+    <div class="node out" style="left:84.3%;top:88.5%">Weboldal</div>
+  </div>
+  <div class="pipe-m" aria-hidden="true"><span>Ötlet</span><span>Excel-tábla</span><span>Kézi munka</span><span>Drága előfizetés</span><span class="core">Spec · Építés · Teszt · Átadás</span><span class="out">Webapp</span><span class="out">Belső eszköz</span><span class="out">Automatizálás</span><span class="out">macOS app</span><span class="out">Weboldal</span></div>
+</section>
+
+<section class="trust wrap">
+  <div class="eyebrow">Ezekkel az eszközökkel építek</div>
+  <div class="row"><span class="m">Python</span><span class="m">FastAPI</span><span>SvelteKit</span><span class="m">Postgres</span><span>Claude</span><span class="m">FFmpeg</span><span>Premiere Pro</span><span class="m">Stripe</span><span>Brevo</span></div>
+</section>
+
+<section class="sec wrap how" id="folyamat">
+  <h2 data-reveal>Hogyan dolgozom</h2>
+  <div class="grid2" style="margin-bottom:24px">
+    <div class="card" data-reveal>
+      <div><h3>Írásos specifikáció, fix ár</h3><p>Egy 30 perces beszélgetés után pontokba szedve leírom, mit fog tudni az app, mennyi idő és mennyibe kerül. Ezt fogadod el, ehhez tartom magam. Menet közben nem változik.</p></div>
+      <div class="art"><div class="doc"><b>Specifikáció · Számla-átnevező</b><div class="ln m"></div><div class="ln"></div><div class="ln s"></div><div class="ln m"></div><span class="ok">Elfogadva · 250 000 Ft</span></div></div>
+    </div>
+    <div class="card" data-reveal style="--d:.1s">
+      <div><h3>Építés heti demókkal</h3><p>Minden héten működő részt látsz. Ami nem tetszik, azt korán mondod, nem a végén. Közben típusellenőrzés és automata tesztek futnak minden változtatás után.</p></div>
+      <div class="art"><div class="cal"><span>1. hét</span><span>2. hét</span><span>3. hét</span><span>4. hét</span><span>5. hét</span><span>6. hét</span><span>7. hét</span><span>8. hét</span><i class="d"></i><i class="d"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i><div class="leg"><span><i style="background:var(--peri)"></i>Spec</span><span><i style="background:#f0faf4;border:1px solid #8fd8b3"></i>Demó</span><span><i style="background:#fff;border:1px solid var(--ash)"></i>Teszt</span></div></div></div>
+    </div>
+  </div>
+  <div class="card single" data-reveal>
+    <div class="grid2" style="align-items:center">
+      <div><h3>Átadás, üzemeltetés, hibakövetés</h3><p>A kód a tiéd, saját repóban, dokumentációval. Vagy te futtatod, vagy én üzemeltetem havidíjért: hibariasztás emailben, napi mentés, frissítések. Az átadás utáni 30 napban díjmentesen javítok.</p></div>
+      <div class="art"><div class="term"><div>$ deploy --target vps</div><div><span class="g">✓</span> tesztek: 42/42</div><div><span class="g">✓</span> típusellenőrzés: 0 hiba</div><div><span class="g">✓</span> napi mentés beállítva</div><div><span class="y">●</span> hibakövetés: riasztás emailre</div><div>kész · 31 mp</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap works" id="munkaim">
+  <div class="card" data-reveal>
+    <div>
+      <h2>Szoftverek, amik ma is futnak</h2>
+      <p>Mindegyiket egyedül építettem, és mindegyiket valaki naponta használja. Vágóplugin, feliratozó, archiváló, jegyzetelő, éles webappok. Nem demók, nem tanulóprojektek.</p>
+      <a class="btn btn-black" href="#projektek">Projektek részletesen</a>
+    </div>
+    <div class="list"><div class="wash"></div>
+      <div class="track">
+        <span class="item"><i>PP</i>AdyPod <small>Premiere plugin</small></span>
+        <span class="item"><i>WA</i>Ady <small>feliratozó</small></span>
+        <span class="item"><i>WA</i>Sonia <small>sonia.hu</small></span>
+        <span class="item"><i>OS</i>Scribe <small>macOS</small></span>
+        <span class="item"><i>WA</i>Investo <small>pénzügy</small></span>
+        <span class="item"><i>OS</i>Nova Offload <small>macOS</small></span>
+        <span class="item"><i>AI</i>Számla-átnevező <small>automatizálás</small></span>
+        <span class="item"><i>WW</i>trustfunnel.hu <small>weboldal</small></span>
+        <span class="item"><i>WW</i>Podcast-ajánlat <small>landing</small></span>
+        <span class="item"><i>PP</i>AdyPod <small>Premiere plugin</small></span>
+        <span class="item"><i>WA</i>Ady <small>feliratozó</small></span>
+        <span class="item"><i>WA</i>Sonia <small>sonia.hu</small></span>
+        <span class="item"><i>OS</i>Scribe <small>macOS</small></span>
+        <span class="item"><i>WA</i>Investo <small>pénzügy</small></span>
+        <span class="item"><i>OS</i>Nova Offload <small>macOS</small></span>
+        <span class="item"><i>AI</i>Számla-átnevező <small>automatizálás</small></span>
+        <span class="item"><i>WW</i>trustfunnel.hu <small>weboldal</small></span>
+        <span class="item"><i>WW</i>Podcast-ajánlat <small>landing</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap" id="projektek">
+  <h2 data-reveal>Kilenc szoftver, egy ember</h2>
+  <div class="grid3">
+    <div class="card wash-mint" data-reveal><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M9 19v-9"/></svg><h3>AdyPod</h3><p>Jumpcut és multicam vágás Premiere Próban: csend-detektálás, beszélőfelismerés a kamerák hangjából. Az AutoPod-előfizetés kiváltva, három vágógépen éles, 112 automata teszt.</p></div>
+    <div class="card wash-peri" data-reveal style="--d:.05s"><svg class="ic" viewBox="0 0 24 24"><path d="M4 6h16v10H4zM8 20h8"/></svg><h3>Ady</h3><p>Feliratozó webapp a stúdiónak: helyi átírás szószintű időzítéssel, felirat ráégetése, átirat öt formátumban. Submagic és Alrite kiváltva, négy munkatárs használja naponta.</p></div>
+    <div class="card wash-coral" data-reveal style="--d:.1s"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Sonia</h3><p>21 napos önismereti interjú: esténként kérdez, hangban vagy szövegben válaszolsz. Saját szerver, Postgres, hibakövetés, heti email. Publikus termék a sonia.hu-n.</p></div>
+    <div class="card wash-gold" data-reveal><svg class="ic" viewBox="0 0 24 24"><path d="M5 4h14v16H5zM9 9h6M9 13h6"/></svg><h3>Scribe</h3><p>Megbeszélés-jegyző macOS-re: helyben futó magyar átirat, AI-összefoglaló, archívum, Notion-szinkron. A kész összefoglalón kívül semmi nem hagyja el a gépet.</p></div>
+    <div class="card wash-lav" data-reveal style="--d:.05s"><svg class="ic" viewBox="0 0 24 24"><path d="M4 18l5-6 4 3 7-9"/></svg><h3>Investo</h3><p>Portfólióelemző: tranzakció-import Excelből, all-time hozamgörbe, szabályalapú javaslatmotor. A Google Finance portfóliókövetőjét váltotta ki.</p></div>
+    <div class="card wash-orange" data-reveal style="--d:.1s"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16v12H4zM8 7V4h8v3"/></svg><h3>Nova Offload</h3><p>Kamerakártyák archiválása SSD-re és HDD-re egy olvasással, hash-ellenőrzéssel, a stúdió kézikönyve szerint. Az Offshoot-előfizetés kiváltva.</p></div>
+    <div class="card wash-mint" data-reveal><svg class="ic" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6zM9 12h6M9 16h6"/></svg><h3>Számla-átnevező</h3><p>Bedobod a ZIP-et, a számlák dátum és kiállító szerint átnevezve jönnek vissza. AI-alapú kinyerés, öt párhuzamos szálon. 17 számla 73 másodperc alatt.</p></div>
+    <div class="card wash-peri" data-reveal style="--d:.05s"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-3 3-3 15 0 18M12 3c3 3 3 15 0 18"/></svg><h3>trustfunnel.hu</h3><p>Framer-oldal kiváltása statikus oldallal: saját domain, HTTPS, minden elem helyben, nulla havidíj. Évi 60 000 Ft megtakarítás, azonos kinézet.</p></div>
+    <div class="card wash-gold" data-reveal style="--d:.1s"><svg class="ic" viewBox="0 0 24 24"><path d="M4 5h16v11H4zM8 20h8M12 16v4"/></svg><h3>Podcast-ajánlat oldal</h3><p>Ajánlati landing, mellé kattintásos szövegszerkesztő: a nem fejlesztő kolléga átírja a szöveget, a mentés magától élesít. Szövegmódosítás fejlesztő nélkül.</p></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="miert">
+  <h2 data-reveal>Miért velem</h2>
+  <div class="grid2">
+    <div class="card wash-peri" data-reveal><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg><h3>Fix ár, nulla meglepetés</h3><p>Nem óradíj, nem „majd meglátjuk". A specifikációban rögzített ár az utolsó forintig ugyanaz marad az átadásnál is. Ha valamit menet közben kérsz hozzá, arról külön, előre beszélünk.</p></div>
+    <div class="card wash-gold" data-reveal style="--d:.1s"><svg class="ic" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><h3>Hetek, nem hónapok</h3><p>Nincs ügynökségi lánc, nincs projektmenedzser, nincs átadás-átvételi színház. Kis eszköz 1–2 hét, teljes webapp 4–8. AI-alapú fejlesztéssel egy kis csapat munkáját végzem egyedül.</p></div>
+    <div class="card wash-lav" data-reveal><svg class="ic" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg><h3>A kód a tiéd</h3><p>Saját GitHub-repóban kapod, dokumentációval, úgy, hogy bárki tovább tudja vinni. Nincs bezárás, nincs titkos rendszer, nincs „csak én értem".</p></div>
+    <div class="card wash-orange" data-reveal style="--d:.1s"><svg class="ic" viewBox="0 0 24 24"><path d="M4 18l5-6 4 3 7-9M4 21h16"/></svg><h3>Érti az üzleti oldalt is</h3><p>Napi szinten cashflow-t, számlázást és költségvetést kezelek egy produkciós cégnél. A beszélgetésünk arról szól, mennyi időt és pénzt spórol az eszköz, nem arról, milyen technológiával készül.</p></div>
+  </div>
+</section>
+
+<section class="sec wrap">
+  <h2 data-reveal>Három lépésben indulunk</h2>
+  <div class="steps">
+    <div class="card" data-reveal><div class="n">01.</div><h3>Írsz pár mondatot</h3><p>Nem kell kész ötlet, nem kell specifikáció. Elég annyi, mi az, ami ma sok időt visz vagy sok pénzbe kerül. 24 órán belül válaszolok.</p></div>
+    <div class="card" data-reveal style="--d:.1s"><div class="n">02.</div><h3>Beszélgetünk 30 percet</h3><p>Te a problémát mondod, én kérdezek. Utána megkapod írásban a specifikációt és a fix árat. Ha nem szoftver a megoldás, azt is megmondom, ingyen.</p></div>
+    <div class="card" data-reveal style="--d:.2s"><div class="n">03.</div><h3>Heti demók, aztán átadás</h3><p>Minden héten működő részt látsz. A végén közösen teszteljük, megkapod a kódot és a dokumentációt, és 30 napig díjmentesen javítok.</p></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="arak">
+  <h2 data-reveal>Árak</h2>
+  <div class="prices">
+    <div class="card" data-reveal><div class="n">01 · Automatizálás</div><h3>Kis eszköz</h3><div class="meta"><div><small>Időtáv</small><b>1–2 hét</b></div><div><small>Ár</small><b>250 000 Ft-tól</b></div></div><ul><li>Egy jól körülhatárolt, ismétlődő feladat kiváltása</li><li>Fájlfeldolgozás, adatkinyerés, értesítés</li><li>Helyi app vagy egyszerű webes felület</li></ul><div class="ex">Példa<b>Számla-átnevező</b></div></div>
+    <div class="card" data-reveal style="--d:.05s"><div class="n">02 · Belső eszköz</div><h3>Eszköz, weboldal</h3><div class="meta"><div><small>Időtáv</small><b>2–4 hét</b></div><div><small>Ár</small><b>600 000 Ft-tól</b></div></div><ul><li>Vezérlőpult, nyilvántartás, több felhasználó</li><li>Statikus weboldal vagy landing saját domainnel</li><li>macOS app vagy Premiere Pro bővítmény</li></ul><div class="ex">Példa<b>Ady, Nova Offload, trustfunnel.hu</b></div></div>
+    <div class="card" data-reveal style="--d:.1s"><div class="n">03 · Webapp</div><h3>Teljes webapp</h3><div class="meta"><div><small>Időtáv</small><b>4–8 hét</b></div><div><small>Ár</small><b>1 500 000 Ft-tól</b></div></div><ul><li>Bejelentkezés, adatbázis, fizetés, email</li><li>Éles szerver, hibakövetés, napi mentés</li><li>Egy drága SaaS azon részének megépítése, amit használsz</li></ul><div class="ex">Példa<b>Sonia, AdyPod</b></div></div>
+    <div class="card" data-reveal style="--d:.15s"><div class="n">04 · Havonta</div><h3>Üzemeltetés</h3><div class="meta"><div><small>Időtáv</small><b>folyamatos</b></div><div><small>Ár</small><b>25 000 Ft/hó-tól</b></div></div><ul><li>Szerver, mentések, biztonsági frissítések</li><li>Hibariasztás emailben, javítás bejelentés nélkül is</li><li>Kisebb módosítások benne</li></ul><div class="ex">Minden csomagban<b>spec, fix ár, heti demó, a kód a tiéd, 30 nap javítás</b></div></div>
+  </div>
+  <p class="prices-note">Tájékoztató sávok, a pontos ár a specifikációban rögzül. Minden ár egyéni vállalkozói számlával.</p>
+</section>
+
+<section class="sec wrap" id="rolam">
+  <h2 data-reveal>Rólam</h2>
+  <div class="about">
+    <div class="card portrait" data-reveal><span class="badge">Fotó hamarosan</span><svg viewBox="0 0 200 250" aria-hidden="true"><circle cx="100" cy="90" r="46" fill="currentColor"/><path d="M20 250c0-55 36-88 80-88s80 33 80 88" fill="currentColor"/></svg></div>
+    <div class="card" data-reveal style="--d:.1s">
+      <h3 style="margin-top:0;font-size:32px">Gyovai Ádám vagyok. Egy ember, nem ügynökség.</h3>
+      <p class="big">2023 óta a Nova Produkciós Iroda társalapítója és pénzügyi vezetője vagyok, mellette a Kezdő Befektető közösséget viszem 11 000 követővel.</p>
+      <p>Az elmúlt évben a cég és a saját projektjeim minden szoftverigényét magam oldottam meg: vágóplugin, feliratozó, archiváló, jegyzetelő, éles webappok.</p>
+      <p>AI-alapú fejlesztéssel dolgozom, ezért egy kis csapat munkáját tudom egyedül elvégezni. A tervezés, a tesztelés és a felelősség viszont az enyém: minden sor kód átmegy típusellenőrzésen és automata teszteken, mielőtt hozzád kerül.</p>
+      <a class="tlink" href="mailto:gyovaiadam97@gmail.com?subject=Szoftver%20%C3%B6tlet">Írj nekem</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap" id="gyik">
+  <h2 data-reveal>Gyakori kérdések</h2>
+  <div class="faq" data-reveal>
+    <details><summary>Mennyi idő alatt készül el?</summary><p>Kis eszköz 1–2 hét, belső rendszer 2–4 hét, teljes webapp 4–8 hét. A specifikációban pontos határidő van, és heti demón látod, hol tart.</p></details>
+    <details><summary>Kié lesz a kód?</summary><p>A tiéd. Saját GitHub-repóban kapod, dokumentációval, úgy, hogy bárki más is tovább tudja vinni, ha egyszer úgy döntesz.</p></details>
+    <details><summary>Mi van, ha elromlik?</summary><p>Minden éles appban hibakövetés fut, ami emailt küld, ha baj van, gyakran még azelőtt, hogy te észrevennéd. Az átadás utáni 30 napban díjmentesen javítok, utána üzemeltetési havidíjjal vagyok elérhető.</p></details>
+    <details><summary>AI-val készül?</summary><p>Igen, AI-alapú fejlesztéssel, ettől gyors és megfizethető. A tervezés, a tesztelés és a döntések viszont az enyémek, és minden kód átmegy típusellenőrzésen és automata teszteken.</p></details>
+    <details><summary>Kell hozzá technikai tudás a részemről?</summary><p>Nem. Beszélgetünk, én kérdezek, te válaszolsz. A specifikációt közérthetően írom, és a heti demókon a kész működést látod, nem kódot.</p></details>
+    <details><summary>Mi az, amit nem vállalok?</summary><p>Nagy csapatot igénylő, több hónapos rendszereket, natív mobilappot és olyan projektet, ahol nincs egy konkrét ember, aki döntést tud hozni. Ha ilyen a helyzet, megmondom az első beszélgetésen.</p></details>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="cta" id="kapcsolat" data-reveal>
+    <h2>Írj pár mondatot,<br>a többit megbeszéljük.</h2>
+    <p>Nem kell kész ötlet, nem kell specifikáció. Elég annyi, mi az, ami ma sok időt visz vagy sok pénzbe kerül. 24 órán belül válaszolok.</p>
+    <div class="row"><a class="btn btn-black" href="mailto:gyovaiadam97@gmail.com?subject=Szoftver%20%C3%B6tlet">Email írása</a><a class="btn btn-ghost" href="#munkaim">Munkáim</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <div class="foot">
+    <div>
+      <a class="logo" href="#"><svg viewBox="0 0 44 44" aria-hidden="true"><g fill="#242424"><circle cx="22" cy="6" r="2.6"/><circle cx="33.3" cy="10.7" r="2.6"/><circle cx="38" cy="22" r="2.6"/><circle cx="33.3" cy="33.3" r="2.6"/><circle cx="22" cy="38" r="2.6"/><circle cx="10.7" cy="33.3" r="2.6"/><circle cx="6" cy="22" r="2.6"/><circle cx="10.7" cy="10.7" r="2.6"/></g></svg>gyovaiadam</a>
+      <div class="follow">Kapcsolat<div class="soc"><a href="https://github.com/gyovaiadam97" target="_blank" rel="noopener" aria-label="GitHub">gh</a><a href="mailto:gyovaiadam97@gmail.com" aria-label="Email">@</a></div></div>
+    </div>
+    <div class="col"><h4>Oldal</h4><a href="#folyamat">Folyamat</a><a href="#munkaim">Munkáim</a><a href="#miert">Miért én</a></div>
+    <div class="col"><h4>Árak</h4><a href="#arak">Csomagok</a><a href="#arak">Üzemeltetés</a></div>
+    <div class="col"><h4>Rólam</h4><a href="#rolam">Ki vagyok</a><a href="#gyik">Kérdések</a></div>
+    <div class="col"><h4>Írj</h4><a href="mailto:gyovaiadam97@gmail.com">gyovaiadam97@gmail.com</a><a href="../">1. verzió</a></div>
+  </div>
+  <div class="clock" id="clock">— CEST · Budapest</div>
+  <div class="foot-bottom"><span>© 2026 Gyovai Ádám, egyéni vállalkozó. Minden jog fenntartva.</span><span>Az oldal saját kód, havidíj nélkül, ahogy az ügyfeleimé is.</span></div>
+</footer>
+
+<script>
+(function(){
+  document.getElementById('annX').addEventListener('click',function(){ document.getElementById('ann').classList.add('hide'); });
+  function clock(){ var d=new Date(); var t=d.toLocaleTimeString('hu-HU',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/Budapest'}); document.getElementById('clock').textContent=t+' CEST · Budapest'; }
+  clock(); setInterval(clock,30000);
+  var pending=[].slice.call(document.querySelectorAll('[data-reveal]'));
+  function check(){ var lim=window.innerHeight*0.92; pending=pending.filter(function(el){ if(el.getBoundingClientRect().top<lim){ el.classList.add('in'); return false; } return true; }); }
+  window.addEventListener('scroll',check,{passive:true}); window.addEventListener('resize',check); window.addEventListener('load',check); check();
+  var poll=setInterval(function(){ check(); if(!pending.length)clearInterval(poll); },250);
+})();
+</script>
+</body>
+</html>
