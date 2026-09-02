@@ -146,7 +146,7 @@ h1, h2, h3 { color: var(--head); font-weight: 400; letter-spacing: -0.02em; }
 
 /* Nagy keretezett kártya: folyamat-idővonal (az eredeti „Outcome" big card) */
 .big { margin-top: 112px; padding: 64px 0; }
-.big .in { display: grid; grid-template-columns: 5fr 7fr; gap: 48px; align-items: start; }
+.big .big-in { display: grid; grid-template-columns: 5fr 7fr; gap: 48px; align-items: start; }
 .tl { display: flex; flex-direction: column; gap: 14px; margin-top: 48px; }
 .tl-row { display: grid; grid-template-columns: 150px 1fr; gap: 24px; align-items: center; }
 .tl-row .lab { font-family: var(--mono); font-size: 10px; text-transform: uppercase; color: var(--bone-60); background: var(--bone-04); border-radius: 4px; padding: 9px 10px; white-space: nowrap; }
@@ -289,7 +289,7 @@ footer { border-top: 1px solid var(--bone-08); padding: 40px 24px 0; overflow: h
   .hero { height: auto; min-height: 0; }
   .hero-in { padding: 88px 20px 40px; }
   .hero h1 { font-size: 38px; }
-  .float { position: relative; left: auto; transform: none; bottom: auto; margin: 16px auto 0; width: 100%; }
+  .float { position: relative; left: auto; transform: none; bottom: auto; margin: 16px auto 0; width: 100%; animation-name: rise; }
   .float-1 { margin-top: 48px; }
   .sec { padding-top: 80px; }
   .sec-head h2 { font-size: 28px; }
@@ -304,4 +304,89 @@ footer { border-top: 1px solid var(--bone-08); padding: 40px 24px 0; overflow: h
   .cta { padding: 96px 16px; } .cta h2 { font-size: 40px; }
   .foot-mid { grid-template-columns: 1fr; }
   .fab { display: none; }
+}
+
+/* ============ ANIMÁCIÓK (az eredeti ai.work mozgásai) ============ */
+/* Görgetésre megjelenés */
+[data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
+[data-reveal].in { opacity: 1; transform: none; }
+
+
+/* Hero belépő */
+.hero-img img { transform: scale(1.08); animation: heroZoom 2.4s cubic-bezier(.2,.7,.2,1) forwards; }
+.hero-img { opacity: 0; animation: fadeIn 1.2s ease forwards; }
+@keyframes heroZoom { to { transform: scale(1); } }
+@keyframes fadeIn { to { opacity: 1; } }
+.hero h1, .hero .lead, .hero-cta { opacity: 0; transform: translateY(20px); animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
+.hero h1 { animation-delay: .5s; }
+.hero h1 span { display: block; opacity: 0; animation: rise .9s cubic-bezier(.2,.7,.2,1) .75s forwards; }
+.hero .lead { animation-delay: 1s; }
+.hero-cta { animation-delay: 1.2s; }
+.float { opacity: 0; transform: translate(-50%, 40px); animation: floatIn 1s cubic-bezier(.2,.7,.2,1) forwards; }
+.float-1 { animation-delay: 1.5s; }
+.float-2 { animation-delay: 1.8s; }
+@keyframes rise { to { opacity: 1; transform: none; } }
+@keyframes floatIn { to { opacity: 1; transform: translate(-50%, 0); } }
+.float-1 .st { animation: spin 1.1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.float-2 .cur { display: inline-block; width: 1px; height: 14px; background: #141414; vertical-align: -2px; margin-left: 2px; animation: blink 1s steps(2) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Számok felpörgése: JS írja, itt csak a „kész" állapot */
+.stat .num { font-variant-numeric: tabular-nums; }
+
+/* Idővonal: pöttyök sorban gyulladnak */
+.ticks i { transition: background .25s ease, opacity .25s ease; }
+.ticks i.on { background: var(--bone-08); opacity: 1; }
+.tl.play .ticks i.on { background: var(--bone); opacity: .8; transition-delay: var(--t); }
+.replay { position: absolute; right: 24px; top: 24px; }
+
+/* Mockok */
+.mock .term div { opacity: 0; animation: termLine 7s linear infinite; }
+.mock .term div:nth-child(1) { animation-delay: 0s; } .mock .term div:nth-child(2) { animation-delay: .6s; } .mock .term div:nth-child(3) { animation-delay: 1.2s; }
+.mock .term div:nth-child(4) { animation-delay: 2.2s; } .mock .term div:nth-child(5) { animation-delay: 2.8s; } .mock .term div:nth-child(6) { animation-delay: 3.4s; } .mock .term div:nth-child(7) { animation-delay: 4.2s; }
+@keyframes termLine { 0% { opacity: 0; transform: translateY(4px); } 4% { opacity: 1; transform: none; } 88% { opacity: 1; } 96% { opacity: 0; } 100% { opacity: 0; } }
+.mock .pill-row span.on { animation: pillOn 8s ease-in-out infinite; }
+.mock .pill-row span.off { animation: pillOff 8s ease-in-out infinite; }
+.mock .pill-row:nth-child(2) span { animation-delay: 0s; } .mock .pill-row:nth-child(3) span { animation-delay: .5s; } .mock .pill-row:nth-child(4) span { animation-delay: 1s; } .mock .pill-row:nth-child(5) span { animation-delay: 1.5s; }
+@keyframes pillOn { 0%, 20% { background: transparent; color: var(--bone); } 35%, 90% { background: var(--bone); color: #141414; } 100% { background: transparent; color: var(--bone); } }
+@keyframes pillOff { 0%, 20% { color: var(--bone); text-decoration-color: transparent; } 35%, 90% { color: var(--smoke); text-decoration-color: var(--smoke); } 100% { color: var(--bone); text-decoration-color: transparent; } }
+.mock .chat .msg { opacity: 0; animation: msgIn 9s ease-in-out infinite; }
+.mock .chat .msg:nth-child(1) { animation-delay: 0s; } .mock .chat .msg:nth-child(2) { animation-delay: 1.4s; } .mock .chat .msg:nth-child(3) { animation-delay: 2.8s; }
+@keyframes msgIn { 0% { opacity: 0; transform: translateY(8px); } 6% { opacity: 1; transform: none; } 85% { opacity: 1; } 95% { opacity: 0; } 100% { opacity: 0; } }
+.mock .ln { position: relative; overflow: hidden; }
+.mock .ln::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, var(--bone-10), transparent); transform: translateX(-100%); animation: shimmer 2.6s ease-in-out infinite; }
+@keyframes shimmer { to { transform: translateX(100%); } }
+
+/* Inbox */
+.inbox .m { opacity: 0; transform: translateY(8px); transition: opacity .7s ease, transform .7s ease; }
+.inbox.in .m:nth-child(1) { opacity: 1; transform: none; transition-delay: .3s; }
+.inbox.in .m:nth-child(2) { opacity: 1; transform: none; transition-delay: 1.4s; }
+.inbox .badge.red { animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 4px rgba(255,150,52,.12); } }
+
+/* Eszköz-chipek lebegése, mag lüktetése */
+.tools .t { animation: drift var(--dur, 7s) ease-in-out infinite alternate; animation-delay: var(--dl, 0s); }
+@keyframes drift { from { transform: translate(0, 0); } to { transform: translate(var(--dx, 6px), var(--dy, -10px)); } }
+.tools .core { animation: corePulse 4s ease-in-out infinite; }
+@keyframes corePulse { 50% { box-shadow: 0 0 0 18px rgba(212,208,201,.03), 0 0 0 36px rgba(212,208,201,.015); } }
+
+/* Munkakártya-sor: kártyák beúszása, a „01/02/03" sorok egymás után */
+.work .row { opacity: 0; transform: translateY(8px); transition: opacity .6s ease, transform .6s ease; }
+.work.in .row:nth-child(1) { opacity: 1; transform: none; transition-delay: .1s; }
+.work.in .row:nth-child(2) { opacity: 1; transform: none; transition-delay: .25s; }
+.work.in .row:nth-child(3) { opacity: 1; transform: none; transition-delay: .4s; }
+
+/* Óriás wordmark felúszása */
+.giant { transform: translateY(30%); opacity: 0; transition: transform 1.2s cubic-bezier(.2,.7,.2,1), opacity 1.2s ease; }
+.giant.in { transform: none; opacity: 1; }
+
+/* Sima gomb-interakciók */
+.btn, .chip, .arrow, .fab { transition: background .2s, color .2s, border-color .2s, transform .2s; }
+.btn:active, .arrow:active { transform: scale(.97); }
+
+/* Csökkentett mozgás */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001s !important; animation-iteration-count: 1 !important; transition-duration: .001s !important; transition-delay: 0s !important; }
+  [data-reveal], .giant, .inbox .m, .work .row, .hero h1, .hero .lead, .hero-cta, .float, .hero-img, .mock .term div, .mock .chat .msg { opacity: 1 !important; transform: none !important; }
 }
